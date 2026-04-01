@@ -17,6 +17,73 @@ Engagement Ratios: Calculating the DAU/MAU (Daily Active Users / Monthly Active 
 
 Cohort Construction: Building complex CTEs (Common Table Expressions) to group users by their signup month and track their activity over a 12-month period.
 
+1. Quantifying the Retention Crisis
+This query identifies the massive gap between new and repeat users.
+
+SQL
+SELECT 
+    order_count, 
+    COUNT(customer_id) AS total_users
+FROM (
+    SELECT customer_id, COUNT(order_id) AS order_count
+    FROM com
+    GROUP BY customer_id
+) AS user_stats
+GROUP BY order_count;
+-- Result: Revealed 6,444 one-time buyers versus only 45 repeat customers.
+2. Cohort Analysis (Customer Longevity)
+This query tracks how long customers stay with the brand after their first purchase.
+
+SQL
+WITH first_purchase AS (
+    SELECT 
+        customer_id, 
+        MIN(order_date) AS start_date
+    FROM com
+    GROUP BY customer_id
+)
+SELECT 
+    TIMESTAMPDIFF(MONTH, f.start_date, c.order_date) AS month_index,
+    COUNT(DISTINCT c.customer_id) AS active_users
+FROM com c
+JOIN first_purchase f ON c.customer_id = f.customer_id
+GROUP BY month_index
+ORDER BY month_index;
+-- Result: Proved that engagement drops to near zero after the first month.
+Python: Advanced Analytics and Trends
+These scripts were used for statistical modeling and identifying the "North Star" metric.
+
+1. Revenue Growth Rate Calculation
+Analyzing the momentum of the business month-over-month.
+
+Python
+# Grouping data by month and calculating percent change
+monthly_revenue = df.groupby('order_month')['payment_value'].sum()
+growth_rate = monthly_revenue.pct_change() * 100
+
+# Printing the growth trend
+print(growth_rate)
+2. Identifying High Value Customers
+Using quantile analysis to isolate the top spenders for targeted marketing.
+
+Python
+# Identify the top 25 percent threshold for spending
+threshold = df['payment_value'].quantile(0.75)
+
+# Calculate the count of high value users
+high_value_count = df[df['payment_value'] > threshold]['customer_id'].nunique()
+total_users = df['customer_id'].nunique()
+
+# Strategic Ratio
+ratio = (high_value_count / total_users) * 100
+print(f"High Value Segment: {ratio:.2f} percent of the user base")
+Technical Summary
+SQL Environment: Used for Average Order Value (AOV) and Daily Active User (DAU) tracking.
+
+Python Environment: Used for identifying the North Star Metric (Revenue per User) and time-series growth analysis.
+
+Key Discovery: The code confirms that while acquisition is high, the lack of a "Loyalty Loop" results in a 3 percent retention rate.
+
 2. Advanced Analytics with Python
 Using Pandas and Matplotlib, I performed a "North Star" analysis:
 
@@ -128,6 +195,10 @@ The revenue growth analysis shows high volatility, especially in early stages du
 
 **Q:** How fast is the business growing over time?
 3. Data Visualization in Tableau
+## 📊 Dashboard Overview
+
+![Dashboard](images/DASHBOARD.png)
+
 I developed a Tableau workbook to bridge the gap between technical data and executive decision-making. The dashboards focused on:
 
 The Black Friday Spike: Visualizing the massive activity surge on November 24th, 2017, and the subsequent drop-off.
