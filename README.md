@@ -1,4 +1,4 @@
-\E-Commerce Project: The Customer Retention Crisis
+E-Commerce Project: The Customer Retention Crisis
 Project Overview
 This project is an end-to-end data science and business intelligence study of an e-commerce ecosystem. The objective was to move beyond basic surface-level metrics like total sales and uncover the structural health of the business. By combining SQL for data engineering, Python for advanced analytics, and Tableau for stakeholder communication, I identified a critical "Leaky Bucket" problem where high user acquisition was being undermined by a 96 percent churn rate.
 
@@ -25,9 +25,95 @@ Revenue per User: I identified this as the primary health metric. Python scripts
 Growth Rate Analysis: I calculated the percentage change in revenue over time to identify if the business momentum was accelerating or decelerating.
 
 High-Value User Identification: I used quantile-based segmentation to isolate the top 25 percent of spenders for targeted marketing recommendations.
+## 📊 Key Visualizations & Questions
 
-How is order activity changing over time?  
+### 📈 Daily Orders Trend
+![Daily Orders](images/chart1.png)
+**Q:** How does order volume change over time and are there any spikes?
 
+---
+
+### 📈 Daily Revenue Trend
+![Daily Revenue](images/chart2.png)
+**Q:** Is revenue growing consistently and what causes fluctuations?
+
+---
+
+### 📊 Monthly Orders vs Revenue
+![Monthly Orders vs Revenue](images/chart3.png)
+**Q:** Is growth driven by order volume or higher spending per order?
+
+---
+
+### 📉 Revenue Distribution
+![Revenue Distribution](images/chart4.png)
+**Q:** Is revenue concentrated among a small group of customers?
+
+---
+
+### 📉 Log Revenue Distribution
+![Log Revenue](images/chart5.png)
+**Q:** Does log transformation reveal hidden patterns in revenue?
+
+---
+
+### 📊 Pareto Analysis (80/20)
+![Pareto](images/chart6.png)
+**Q:** Do a small percentage of customers contribute most of the revenue?
+
+---
+
+### 👥 Customer Segmentation (CLV)
+![Segmentation](images/chart7.png)
+**Q:** How are customers distributed across value segments?
+
+---
+
+### 🔻 Customer Conversion Funnel
+![Funnel](images/chart8.png)
+**Q:** Where is the biggest drop-off in the customer journey?
+
+---
+
+### 🔻 Funnel with Conversion Rates
+![Funnel Rates](images/chart9.png)
+**Q:** What percentage of users convert at each stage?
+
+---
+
+### 🔁 Cohort Retention Analysis
+![Cohort](images/chart10.png)
+**Q:** Do customers return after their first purchase?
+
+---
+
+### 📊 Revenue Cohort Retention
+![Revenue Cohort](images/chart11.png)
+**Q:** How does revenue retention vary across cohorts?
+
+---
+
+### 📊 Customer Lifetime Value Distribution
+![CLV](images/chart12.png)
+**Q:** How is customer lifetime value distributed?
+
+---
+
+### 🎥 3D Customer Segmentation
+![3D Segmentation](images/chart13.png)
+**Q:** How do customers differ across multiple dimensions?
+
+---
+
+### 📈 Revenue per User (North Star)
+![Revenue per User](images/chart14.png)
+**Q:** Is revenue generated per user improving over time?
+
+---
+
+### 📈 Revenue Growth Rate
+![Growth](images/chart15.png)
+**Q:** How fast is the business growing over time?
 3. Data Visualization in Tableau
 I developed a Tableau workbook to bridge the gap between technical data and executive decision-making. The dashboards focused on:
 
