@@ -32,12 +32,15 @@ High-Value User Identification: I used quantile-based segmentation to isolate th
 **Q:** How does order volume change over time and are there any spikes?
 
 ---
+The daily order trend shows a clear upward trajectory, indicating business growth. A major spike suggests a successful promotional event, and post-event activity remains higher, indicating partial customer retention.”
 
 ### 📈 Daily Revenue Trend
 ![Daily Revenue](images/chart2.png)
 **Q:** Is revenue growing consistently and what causes fluctuations?
 
 ---
+“Revenue shows a strong upward trend aligned with order growth. However, large spikes indicate the presence of high-value transactions, suggesting that revenue is driven both by customer volume and purchase size.”
+3. 
 
 ### 📊 Monthly Orders vs Revenue
 ![Monthly Orders vs Revenue](images/chart3.png)
@@ -50,60 +53,62 @@ High-Value User Identification: I used quantile-based segmentation to isolate th
 **Q:** Is revenue concentrated among a small group of customers?
 
 ---
-
-### 📉 Log Revenue Distribution
-![Log Revenue](images/chart5.png)
-**Q:** Does log transformation reveal hidden patterns in revenue?
-
----
-
-### 📊 Pareto Analysis (80/20)
-![Pareto](images/chart6.png)
-**Q:** Do a small percentage of customers contribute most of the revenue?
-
----
+The analysis shows a strong upward revenue trend, with peak performance in early 2018. Interestingly, revenue growth is not proportional to order volume, indicating higher customer spending rather than increased order frequency. Additionally, revenue is concentrated in specific months, suggesting dependence on seasonal or promotional events.”
 
 ### 👥 Customer Segmentation (CLV)
 ![Segmentation](images/chart7.png)
 **Q:** How are customers distributed across value segments?
 
 ---
+“I performed end-to-end customer analytics including EDA, revenue analysis, Pareto distribution, CLV modeling, segmentation, and advanced 3D visualization using Plotly to uncover business insights around customer behavior and revenue concentration.”
 
 ### 🔻 Customer Conversion Funnel
 ![Funnel](images/chart8.png)
 **Q:** Where is the biggest drop-off in the customer journey?
 
 ---
+Users → Engaged Users → High-Value Users
 
-### 🔻 Funnel with Conversion Rates
+
 ![Funnel Rates](images/chart9.png)
 **Q:** What percentage of users convert at each stage?
 
 ---
+The funnel analysis revealed that the primary drop-off occurs at the user engagement stage, where only 29% of users become active. However, once users engage, conversion to high-value customers is extremely strong at 86%. This indicates that the core product is effective, but the onboarding or early engagement experience needs improvement.”
 
 ### 🔁 Cohort Retention Analysis
 ![Cohort](images/chart10.png)
 **Q:** Do customers return after their first purchase?
 
 ---
+The cohort retention analysis showed 100% retention only in the initial month, with no repeat activity in subsequent months. This indicates that the dataset contains primarily one-time transactions and lacks repeat purchase behavior. Therefore, retention analysis is not meaningful here, and I would recommend using a dataset with longitudinal customer activity.”
+
+
+
+
 
 ### 📊 Revenue Cohort Retention
 ![Revenue Cohort](images/chart11.png)
 **Q:** How does revenue retention vary across cohorts?
 
 ---
+    Both user retention and revenue cohort analysis showed activity only in the first month, indicating that the dataset contains one-time transactions without repeat behavior. This suggests that retention analysis is not applicable, and the business should focus on acquisition and first-time conversion rather than retention strategies.”
+
+
 
 ### 📊 Customer Lifetime Value Distribution
 ![CLV](images/chart12.png)
 **Q:** How is customer lifetime value distributed?
 
 ---
+“I segmented customers using CLV into quartiles. While the segments appear evenly distributed due to the use of quantiles, combining this with Pareto analysis reveals that revenue is highly concentrated among a small group of high-value customers
 
 ### 🎥 3D Customer Segmentation
 ![3D Segmentation](images/chart13.png)
 **Q:** How do customers differ across multiple dimensions?
 
 ---
+“I performed end-to-end customer analytics including EDA, revenue analysis, Pareto distribution, CLV modeling, segmentation, and advanced 3D visualization using Plotly to uncover business insights around customer behavior and revenue concentration.”
 
 ### 📈 Revenue per User (North Star)
 ![Revenue per User](images/chart14.png)
@@ -111,8 +116,16 @@ High-Value User Identification: I used quantile-based segmentation to isolate th
 
 ---
 
+“I defined Revenue per User as the North Star Metric because it balances both user growth and monetization. While total revenue and users increased steadily, I observed a dip in revenue per user during mid-scaling, indicating lower-quality user acquisition. However, the metric improved significantly in 2018, suggesting better targeting or pricing optimization. This shows the business matured from growth-focused to value-focused.”
+
+
+
 ### 📈 Revenue Growth Rate
 ![Growth](images/chart15.png)
+
+The revenue growth analysis shows high volatility, especially in early stages due to small base effects. While the business demonstrates strong growth spikes during certain months, the lack of consistency suggests reliance on campaign-driven growth rather than sustainable organic growth. I would recommend focusing on stabilizing growth and analyzing peak periods to replicate success.”
+
+
 **Q:** How fast is the business growing over time?
 3. Data Visualization in Tableau
 I developed a Tableau workbook to bridge the gap between technical data and executive decision-making. The dashboards focused on:
