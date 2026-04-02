@@ -21,6 +21,7 @@ Cohort Construction: Building complex CTEs (Common Table Expressions) to group u
 This query identifies the massive gap between new and repeat users.
 
 SQL
+
 SELECT 
     order_count, 
     COUNT(customer_id) AS total_users
@@ -30,6 +31,10 @@ FROM (
     GROUP BY customer_id
 ) AS user_stats
 GROUP BY order_count;
+
+
+
+
 -- Result: Revealed 6,444 one-time buyers versus only 45 repeat customers.
 2. Cohort Analysis (Customer Longevity)
 This query tracks how long customers stay with the brand after their first purchase.
@@ -49,6 +54,8 @@ FROM com c
 JOIN first_purchase f ON c.customer_id = f.customer_id
 GROUP BY month_index
 ORDER BY month_index;
+
+
 -- Result: Proved that engagement drops to near zero after the first month.
 Python: Advanced Analytics and Trends
 These scripts were used for statistical modeling and identifying the "North Star" metric.
