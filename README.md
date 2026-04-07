@@ -1,13 +1,13 @@
-E-Commerce Project: The Customer Retention Crisis
-Project Overview
+## E-Commerce Project: The Customer Retention Crisis
+## Project Overview
 This project is an end-to-end data science and business intelligence study of an e-commerce ecosystem. The objective was to move beyond basic surface-level metrics like total sales and uncover the structural health of the business. By combining SQL for data engineering, Python for advanced analytics, and Tableau for stakeholder communication, I identified a critical "Leaky Bucket" problem where high user acquisition was being undermined by a 96 percent churn rate.
 
-The Business Story: Growth vs Sustainability
+## The Business Story: Growth vs Sustainability
 The data initially shows a business in a high-growth phase. Revenue and order volumes were hitting record highs month-over-month. however, the deeper analysis revealed that this growth was fragile.
 
 The core challenge identified was that the business operated on a "one-and-done" model. While the marketing engine was efficient at bringing people to the digital storefront, the post-purchase experience failed to turn them into loyalists. This creates a dangerous dependency on constant, expensive ad spend to maintain revenue levels.
 
-Technical Methodology
+## Technical Methodology
 1. Data with SQL
 I used MySQL to process raw transactional data and transform it into actionable business logic. Key operations included:
 
@@ -73,7 +73,7 @@ print(growth_rate)
 2. Identifying High Value Customers
 Using quantile analysis to isolate the top spenders for targeted marketing.
 
-Python
+## Python
 # Identify the top 25 percent threshold for spending
 threshold = df['payment_value'].quantile(0.75)
 
@@ -91,7 +91,7 @@ Python Environment: Used for identifying the North Star Metric (Revenue per User
 
 Key Discovery: The code confirms that while acquisition is high, the lack of a "Loyalty Loop" results in a 3 percent retention rate.
 
-2. Advanced Analytics with Python
+## 2. Advanced Analytics with Python
 Using Pandas and Matplotlib, I performed a "North Star" analysis:
 
 Revenue per User: I identified this as the primary health metric. Python scripts revealed a dip during mid-scaling, signaling that the company was sacrificing user quality for pure volume.
@@ -201,7 +201,7 @@ The revenue growth analysis shows high volatility, especially in early stages du
 
 
 **Q:** How fast is the business growing over time?
-3. Data Visualization in Tableau
+## 3. Data Visualization in Tableau
 ## 📊 Dashboard Overview
 
 ![Dashboard](images/DASHBOARD.png)
@@ -212,7 +212,7 @@ The Black Friday Spike: Visualizing the massive activity surge on November 24th,
 
 Revenue vs Order Trends: Proving that revenue growth was driven more by transaction volume than by increasing the value of existing customers.
 
-Key Business Insights
+## Key Business Insights
 The 3 Percent Retention Reality
 The most significant finding was the massive gap between one-time buyers (6,444 users) and repeat buyers (45 users). This resulted in a retention rate of roughly 3 percent.
 
@@ -229,7 +229,7 @@ Using the user segments identified in the Python analysis, the marketing team sh
 Operational Audit
 The data showed that retention did not improve even during high-revenue months. This suggests that the "post-purchase" phase—shipping speed, packaging quality, and customer support—may be a friction point that prevents users from returning.
 
-Conclusion
+## Conclusion
 By shifting the focus from "How many new users did we get?" to "How many users did we keep?", this project provides a roadmap for sustainable, long-term profitability. The tools used (SQL, Python, and Tableau) ensure that these insights are backed by rigorous data and are easy for stakeholders to act upon.
 
 Tools Used: SQL (MySQL), Python (Pandas, Matplotlib), Tableau Desktop, Business Communication.
