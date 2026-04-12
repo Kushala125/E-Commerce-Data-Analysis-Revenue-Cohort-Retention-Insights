@@ -298,8 +298,6 @@ growth_rate = monthly_revenue.pct_change() * 100
 print(growth_rate)
 2. Identifying High Value Customers
 Using quantile analysis to isolate the top spenders for targeted marketing.
-
-## Python
 # Identify the top 25 percent threshold for spending
 threshold = df['payment_value'].quantile(0.75)
 
@@ -312,9 +310,7 @@ ratio = (high_value_count / total_users) * 100
 print(f"High Value Segment: {ratio:.2f} percent of the user base")
 Technical Summary
 SQL Environment: Used for Average Order Value (AOV) and Daily Active User (DAU) tracking.
-
 Python Environment: Used for identifying the North Star Metric (Revenue per User) and time-series growth analysis.
-
 Key Discovery: The code confirms that while acquisition is high, the lack of a "Loyalty Loop" results in a 3 percent retention rate.
 
 ## 2. Advanced Analytics with Python
