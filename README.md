@@ -77,7 +77,7 @@ This creates a **dangerous dependency** on constant, expensive ad spend just to 
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1f3c,100:001a2e&height=2" width="100%"/>
 
-## 🗄️ Part 1 — SQL Analytics
+## 🗄️ Part 1 — SQL Analytics and Python 
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&pause=900&color=FF6B35&center=true&vCenter=true&width=600&height=40&lines=MySQL+%7C+17+Queries+%7C+From+KPIs+to+Cohorts" alt="SQL typing" />
 </div>
